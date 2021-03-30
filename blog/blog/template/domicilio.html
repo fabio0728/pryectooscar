@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %} domicilio {% endblock title %}
+{% block body %} 
+
+<table>
+   <thead>
+        <tr>
+
+           
+            <th>nombre del cliente</th>
+            <th>direccion</th>
+            <th>telefono</th>
+            
+        </tr>
+    </thead>
+    <body>
+        
+        {% for domicilio in domicilios %}
+        <tr>
+
+     
+            <td>{{ domicilio.nombre del cliente }}</td>
+            <td>{{ domicilio.direccion }}</td>
+            <td>{{ domicilio.telefono }}</td>
+            
+            </td>
+        
+        </tr>
+       
+        {% endfor %}
+    </body>
+</table>
+{% endblock body %}

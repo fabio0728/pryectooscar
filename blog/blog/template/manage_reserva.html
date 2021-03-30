@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %} Manage reserva {% endblock title %}
+{% block body %}
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <br>
+        <button type="submit"> reservar </button>
+
+    </form>
+
+{% endblock body %}

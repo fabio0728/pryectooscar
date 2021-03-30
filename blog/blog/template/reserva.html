@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %} reserva {% endblock title %}
+{% block body %} 
+
+<table>
+   <thead>
+        <tr>
+
+           
+            <th>nombre del cliente</th>
+            <th>numero de personas</th>
+            <th>fecha </th>
+            <th>hora </th>
+            <th>numero celular</th>
+            
+        </tr>
+    </thead>
+    <body>
+        <a href="{% url 'create_reserva' %}">reserva</a>
+        {% for reseva in reservas %}
+        <tr>
+
+     
+            <td>{{ reserva.nombre_del_cliente }}</td>
+            <td>{{ reserva.numero_de_personas}}</td>
+            <td>{{ reserva.fecha_y_hora}}</td>
+            <td>{{ reserva.numero_celular}}</td>
+            
+            </td>
+        
+        </tr>
+       
+        {% endfor %}
+    </body>
+</table>
+{% endblock body %}
